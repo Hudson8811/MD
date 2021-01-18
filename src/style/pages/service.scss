@@ -29,9 +29,13 @@
     overflow: hidden;
     @include m1600{
       padding: vw(64) vw(54) 0;
+      height: vw(550);
+      width: vw(440);
     }
     @include m1260{
       padding: vw2(65) vw2(51) 0;
+      height: vw2(325);
+      width: vw2(240);
     }
     @include m768{
       border-left: none;
@@ -52,7 +56,7 @@
       font-size: 72px;
       line-height: 85px;
       transition: 0.4s;
-
+      position: absolute;
       @include m1600{
         font-size: vw(72);
         line-height: vw(85);
@@ -65,6 +69,7 @@
         font-size: vw3(24);
         line-height: vw3(28);
         text-align: center;
+        position: static;
       }
       &::after{
         content: "";
@@ -73,7 +78,7 @@
         height: 10px;
         background: $mainColor;
         margin-top: 12px;
-        transition: 0.4s;
+        transition: 0.4s ease-in;
         @include m1600{
           height: vw(10);
         }
@@ -95,11 +100,15 @@
       flex-grow: 1;
       margin-top: 30px;
       transition: 0.4s;
+      padding-top: 85px;
       @include m1600{
         margin-top: vw(30);
+        padding-top: vw(85);
       }
       @include m1260{
         margin-top: vw2(15);
+        padding-top: vw2(42);
+        white-space: normal;
       }
       @include m768{
         margin-top: vw3(15);
@@ -160,6 +169,7 @@
       }
       @include m768{
         margin-top: vw3(45);
+        padding-top: 0;
       }
     }
 
@@ -174,27 +184,30 @@
         padding-right: vw(60);
       }
       @include m1260{
-        padding-left: vw2(17);
-        padding-right: vw2(17);
+        padding-left: vw2(60);
+        padding-right: vw2(60);
       }
       @include m768{
         padding: vw3(15) 0;
+        width: auto;
       }
       .service__item-title{
         font-weight: normal;
         text-align: center;
         flex-grow: 1;
-        transform: rotate(-90deg) translateX(-50%);
-        position: absolute;
+        transform: rotate(-90deg) translateY(-200%) translateX(-50%);
         width: 455px;
-        left: 50%;
-        top: 43%;
-        transform-origin: left center;
+        left: 0;
+        top: 0;
+        @include m1600{
+          width: vw(455);
+        }
+        @include m1260{
+
+        }
         @include m768{
           transform: none;
           width: auto;
-          position: static;
-          writing-mode: horizontal-tb;
         }
         &::after{
           margin-top: 0;
@@ -204,9 +217,18 @@
       }
       .service__item-list{
         opacity: 0;
+        padding-top: 0;
+        @include m768{
+          opacity: 1;
+          display: none;
+        }
       }
       .arrow-link{
         opacity: 0;
+        @include m768{
+          opacity: 1;
+          display: none;
+        }
       }
       &:hover{
         padding-left: 80px;
@@ -216,8 +238,8 @@
           padding-right: vw(80);
         }
         @include m1260{
-          padding-left: vw2(27);
-          padding-right: vw2(27);
+          padding-left: vw2(80);
+          padding-right: vw2(80);
         }
         @include m768{
           padding: vw3(15) 0;

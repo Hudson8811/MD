@@ -38,7 +38,7 @@ $(document).ready(function () {
 		//normalScrollElements: '.contacts',
 		responsiveWidth: 768,
 		afterResponsive: function(isResponsive){
-			console.log(isResponsive);
+			//console.log(isResponsive);
 		},
 		onLeave: function( origin, destination, direction){
 			if ($(window).width() > 768){
@@ -78,7 +78,20 @@ $(document).ready(function () {
 				fullpage_toggle(true);
 			}
 
+
+			if(destination.index == 1 && origin.index == 0 ){
+				$('.to-top').addClass('active');
+			}
+			if(destination.index == 0 && origin.index == 1 ){
+				$('.to-top').removeClass('active');
+			}
 		}
+	});
+
+	$('.to-top').on('click', function (e) {
+		e.preventDefault();
+		$('.to-top').removeClass('active');
+		$.fn.fullpage.moveTo(1);
 	});
 
 	$('.process').on('mousewheel', function(event) {
@@ -184,14 +197,32 @@ $(document).ready(function () {
 				$('.process__dots').removeClass('locked');
 			}, 600);
 
+
+
 			$('.process__dot').removeClass('active subactive show').addClass('hide');
 			$(this).addClass('active').removeClass('hide');
 			$(this).prev().addClass('subactive').removeClass('hide').prev().addClass('show').removeClass('hide');
 			$(this).next().addClass('subactive').removeClass('hide').next().addClass('show').removeClass('hide');
 			var index = $(this).index();
 			$('.process__block').finish();
-			$('.process__block').fadeOut(200).promise().done(function(){
-				$('.process__block').eq(index).fadeIn(200);
+
+			var next = true;
+			console.log(index);
+			console.log($('.process__block.active').index());
+			if ($('.process__block.active').index() > index){
+				next = false;
+			}
+			var oldClass = 'preNext';
+			if (next){
+				$('.process__block').eq(index).addClass('next');
+				oldClass = 'preNext';
+			} else{
+				$('.process__block').eq(index).addClass('prev');
+				oldClass = 'prePrev';
+			}
+			$('.process__block.active').addClass(oldClass).fadeOut(200).promise().done(function(){
+				$('.process__block').removeClass('active preNext prePrev');
+				$('.process__block').eq(index).fadeIn(300).addClass('active').removeClass('prev next');
 			});
 
 			var wind =  $(window).width();

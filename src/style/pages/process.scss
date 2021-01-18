@@ -32,13 +32,13 @@
   }
   &__right{
     flex-grow: 1;
-    max-height: calc(100vh - 325px);
-    overflow: auto;
+    height: calc(100vh - 325px);
+    overflow: hidden;
     @include m1600{
-      max-height: calc(100vh - 21vw);
+      height: calc(100vh - 21vw);
     }
     @include m1260{
-      max-height: calc(100vh - 29vw);
+     height: calc(100vh - 29vw);
     }
     @include m768 {
       //max-height: calc(100vh - 42vw - 90px);
@@ -171,11 +171,21 @@
   }
   &__block{
     display: none;
+    transition: transform 0.4s;
     @include m768 {
       display: block;
     }
-    &.active{
+    &.prePrev,
+    &.next{
+      transform: translateY(200%);
+    }
+    &.preNext,
+    &.prev{
+      transform: translateY(-200%);
+    }
+    &.active:not([class*=" pre"]){
       display: block;
+      transform: translateY(0);
     }
   }
 }
