@@ -5,6 +5,7 @@
 //= libs/fullpage.min.js
 //= libs/slick.min.js
 //= libs/jquery.mousewheel.min.js
+//= libs/select2.full.min.js
 
 
 /* my scripts */

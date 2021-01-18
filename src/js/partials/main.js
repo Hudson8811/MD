@@ -67,6 +67,11 @@ $(document).ready(function () {
 		$.fn.fullpage.moveTo(1);
 	});
 
+	$(".js-custom-select").select2({
+		placeholder: "Интересующая услуга",
+		minimumResultsForSearch: 99
+	});
+
 	$('.process').on('mousewheel', function(event) {
 		if (event.deltaY > 0){
 			$('.process__control-prev').trigger('click');

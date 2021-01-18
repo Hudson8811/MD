@@ -442,19 +442,23 @@ block main
 					.contacts__left
 						form.contacts__form.form
 							.form__input
-								input(type="text" placeholder="Как к вам обращаться?" required)
+								input(type="text" name="" placeholder="Как к вам обращаться?" required)
 								.form__input-status
 							.form__input
-								input(type="tel" placeholder="Телефон" required)
+								input(type="tel" name="" placeholder="Телефон" required)
 								.form__input-status
 							.form__input
-								input(type="email" placeholder="Электропочта" required)
+								input(type="email" name="" placeholder="Электропочта" required)
 								.form__input-status
 							.form__input
-								input(type="text" placeholder="Интересующая услуга" required)
+								select.js-custom-select(name="" required)
+									option
+									option(value="Аутсорс-разработка") Аутсорс-разработка
+									option(value="Создание сайта") Создание сайта
+									option(value="Техническая поддержка") Техническая поддержка
 								.form__input-status
 							.form__input
-								textarea(placeholder="Сообщение" required)
+								textarea(name="" placeholder="Сообщение" required)
 								.form__input-status
 
 
