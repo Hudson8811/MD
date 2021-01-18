@@ -32,16 +32,16 @@
   }
   &__right{
     flex-grow: 1;
-    max-height: calc(100vh - 350px);
+    max-height: calc(100vh - 325px);
     overflow: auto;
     @include m1600{
-      max-height: calc(100vh - 18.2vw);
+      max-height: calc(100vh - 21vw);
     }
     @include m1260{
-      max-height: calc(100vh - 16.9vw);
+      max-height: calc(100vh - 29vw);
     }
     @include m768 {
-      max-height: initial;
+      max-height: calc(100vh - 42vw - 90px);
     }
   }
   &__dots{

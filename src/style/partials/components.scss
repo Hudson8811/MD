@@ -1,4 +1,4 @@
-.fullpage-wrapper {
+/*.fullpage-wrapper {
   width: 100%!important;
   transform: none!important;
 
@@ -41,7 +41,7 @@
     }
   }
 }
-
+*/
 .fp-tableCell{
   padding-top: 125px;
   box-sizing: border-box;
@@ -54,6 +54,9 @@
   }
   @include m768{
     padding-top: 90px;
+  }
+  > * {
+    height: 100%;
   }
 }
 
