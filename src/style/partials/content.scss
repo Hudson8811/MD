@@ -1,0 +1,15 @@
+.fp-tableCell{
+  > .section__title{
+    margin-top: 25px;
+    @include m1600{
+      margin-top: vw(25);
+    }
+    @include m1260{
+      margin-top: vw2(25);
+    }
+    @include m768{
+      margin-top: vw3(10);
+    }
+  }
+}
+

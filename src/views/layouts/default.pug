@@ -1,0 +1,63 @@
+doctype html
+
+block vars
+include ../components/_mixins
+
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="description" content="")
+		meta(name="keywords" content="")
+		meta(property="og:image" content="images/logo.svg")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel='dns-prefetch' href='https://fonts.gstatic.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' <= '' body='')
+		link(rel='preload' href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap' as='fetch' crossorigin='anonymous')
+		script(type='text/javascript').
+			!function (e, n, t) {
+				"use strict";
+				var o = "https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap", r = "__3perf_googleFonts_e235d";
+				function c(e) {
+					(n.head || n.body).appendChild(e)
+				}
+				function a() {
+					var e = n.createElement("link");
+					e.href = o, e.rel = "stylesheet", c(e)
+				}
+				function f(e) {
+					if (!n.getElementById(r)) {
+						var t = n.createElement("style");
+						t.id = r, c(t)
+					}
+					n.getElementById(r).innerHTML = e
+				}
+				e.FontFace && e.FontFace.prototype.hasOwnProperty("display") ? (t[r] && f(t[r]), fetch(o).then(function (e) {
+					return e.text()
+				}).then(function (e) {
+					return e.replace(/@font-face {/g, "@font-face{font-display:swap;")
+				}).then(function (e) {
+					return t[r] = e
+				}).then(f).catch(a)) : a()
+			}(window, document, localStorage);
+
+		link(href="css/main.css" rel="stylesheet")
+
+
+		//title= `${page.title}`
+
+	body
+		block header
+			include ../partials/_header
+
+		main.main
+			block main
+
+		block footer
+			include ../partials/_footer
+
+
+		script(src="js/main.js")
+
+		block scripts

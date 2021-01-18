@@ -1,0 +1,91 @@
+body{
+  &.dark{
+    color: #FFFFFF;
+    background: $mainColor;
+    a{
+      color: #FFFFFF;
+    }
+    .main{
+      &::before{
+        background: $mainColor;
+      }
+    }
+    .section{
+      &__title{
+        &::before{
+          background: #FFFFFF;
+        }
+      }
+    }
+
+    .call-us{
+      &__img{
+        svg{
+          path{
+            fill: #FFFFFF;
+          }
+          rect{
+            stroke: #FFFFFF;
+          }
+        }
+        &::before{
+          border-color: rgba(255, 255, 255, 0.2);;
+        }
+      }
+      &:hover{
+        .call-us__img{
+          background: #FFFFFF;
+          svg{
+            path{
+              fill: $mainColor;
+            }
+          }
+          &::before{
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+
+
+    .arrow-link{
+      &__img{
+        border-color: #FFFFFF;
+        svg{
+          path{
+            fill: #FFFFFF;
+          }
+        }
+        &::before{
+          border: 0.6px solid rgba(255, 255, 255, 0.2);
+        }
+        &::after{
+          background: #FFFFFF;
+        }
+      }
+      &:hover{
+        .arrow-link__img{
+          background: #FFFFFF;
+          svg{
+            path{
+              fill: $mainColor;
+            }
+          }
+          &::after{
+            background: $mainColor;
+          }
+        }
+      }
+    }
+    .slider-changer{
+      &__current{
+        border-right: vw3(4) solid #FFFFFF;
+      }
+      &__total{
+        color: #636363;
+      }
+    }
+  }
+}
+

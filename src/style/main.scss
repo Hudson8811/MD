@@ -1,0 +1,26 @@
+@import "libs/reset.css";
+@import "libs/fonts.css";
+@import "libs/fullpage.min.css";
+@import "libs/slick";
+
+
+@import "partials/_var";
+@import "partials/mixins";
+@import "partials/main";
+@import "partials/components";
+@import "partials/_header";
+@import "partials/footer";
+
+@import "partials/content";
+
+@import "pages/home";
+@import "pages/service";
+@import "pages/advantage";
+@import "pages/portfolio";
+@import "pages/process";
+@import "pages/contacts";
+
+
+@import "partials/dark";
+
+
