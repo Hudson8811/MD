@@ -41,7 +41,8 @@
       max-height: calc(100vh - 29vw);
     }
     @include m768 {
-      max-height: calc(100vh - 42vw - 90px);
+      //max-height: calc(100vh - 42vw - 90px);
+      max-height: initial;
     }
   }
   &__dots{

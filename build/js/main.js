@@ -49,6 +49,7 @@ $(document).ready(function () {
 		scrollOverflow: true,
 		bigSectionsDestination: top,
 		//normalScrollElements: '.process__right',
+		//normalScrollElements: '.contacts',
 		onLeave: function( origin, destination, direction){
 			if(destination.index == 1|| destination.index == 3 || destination.index == 5){
 				$('body, .header').addClass('dark');

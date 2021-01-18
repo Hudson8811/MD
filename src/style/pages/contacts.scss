@@ -1,4 +1,6 @@
 .contacts{
+  max-height: 100%;
+  overflow: auto;
   &__flex{
     display: flex;
     flex-grow: 1;
