@@ -124,16 +124,16 @@
         background: transparent;
         transition: 0.4s linear;
       }
+      &::before{
+        top: 0;
+      }
+      &::after{
+        bottom: 0;
+      }
       &.active{
         &::before,
         &::after{
           background: $mainColor;
-        }
-        &::before{
-          top: 0;
-        }
-        &::after{
-          bottom: 0;
         }
       }
     }
@@ -364,7 +364,7 @@
     }
   }
 }
-
+/*
 .main{
   &::before{
     content: "";
@@ -376,7 +376,7 @@
     top: 0;
     left: 0;
     background: #FFFFFF;
-    transition: 0.4s;
+    transition: 0.3s linear;
     @include m1260{
       height: 83px;
     }
@@ -384,4 +384,4 @@
       height: 70px;
     }
   }
-}
+}*/

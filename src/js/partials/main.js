@@ -5,15 +5,21 @@ $(document).ready(function () {
 		scrollHorizontally: false,
 		controlArrows: false,
 		loopHorizontal: false,
-		scrollOverflow: true,
+		//scrollOverflow: false,
 		bigSectionsDestination: top,
 		//normalScrollElements: '.process__right',
-		normalScrollElements: '.contacts',
+		//normalScrollElements: '.contacts',
+		responsiveWidth: 768,
+		afterResponsive: function(isResponsive){
+			console.log(isResponsive);
+		},
 		onLeave: function( origin, destination, direction){
-			if(destination.index == 1|| destination.index == 3 || destination.index == 5){
-				$('body, .header').addClass('dark');
-			} else {
-				$('body, .header').removeClass('dark');
+			if ($(window).width() > 768){
+				if(destination.index == 1|| destination.index == 3 || destination.index == 5){
+					$('body, .header').addClass('dark');
+				} else {
+					$('body, .header').removeClass('dark');
+				}
 			}
 			$('.js-top-menu li').removeClass('active');
 			$('.js-top-menu a[data-index="'+destination.index+'"]').parent().addClass('active');
@@ -296,5 +302,43 @@ $(document).ready(function () {
 			$(".process__right").slick('slickNext');
 		});
 	}
+
+
+	var target = $('.section.dark');
+	darks = [];
+	whites = [];
+	offset = 50;
+	target.each(function () {
+		darks.push($(this).offset().top - offset);
+		whites.push($(this).offset().top+$(this).outerHeight() - offset);
+	});
+	setTimeout(function (){
+		darks = [];
+		whites = [];
+		target.each(function () {
+			darks.push($(this).offset().top - offset);
+			whites.push($(this).offset().top+$(this).outerHeight() - offset);
+		});
+	},1000)
+
+	function refreshScroll(){
+		if ($(window).width() < 769){
+			var winScrollTop = $(this).scrollTop();
+			var dark = false;
+			$.each(darks, function (index, value) {
+				if (winScrollTop >= value && winScrollTop <= whites[index]){
+					dark = true;
+				}
+			});
+			if (dark) {
+				$('.header').addClass('dark');
+			} else {
+				$('.header').removeClass('dark');
+			}
+		}
+	}
+
+	refreshScroll();
+	$(window).scroll(refreshScroll);
 
 });

@@ -1,4 +1,4 @@
-body{
+.section{
   &.dark{
     color: #FFFFFF;
     background: $mainColor;
@@ -84,6 +84,23 @@ body{
       }
       &__total{
         color: #636363;
+      }
+    }
+  }
+}
+
+body{
+  &.dark{
+    .main{
+      &::before{
+        background: $mainColor;
+      }
+    }
+    header{
+      color: #FFFFFF;
+      //background: $mainColor;
+      a{
+        color: #FFFFFF;
       }
     }
   }
