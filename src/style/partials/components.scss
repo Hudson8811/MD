@@ -684,6 +684,18 @@
 .select2-results__option{
   background: #FFFFFF;
   color: $mainColor;
+  padding: 10px 19px;
+  @include m1260{
+    padding: vw2(10) vw2(20);
+  }
+  @include m768 {
+    padding: vw3(10) vw3(10);
+  }
+}
+.select2-container--default .select2-results__option--selected {
+  background: #FFFFFF;
+  color: $mainColor;
+  font-weight: 600;
 }
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
   background: $mainColor;
