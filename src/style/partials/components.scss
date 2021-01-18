@@ -62,6 +62,11 @@
   }
 }
 
+.fp-scroller {
+  display: flex;
+  height: 100%;
+}
+
 .social{
   display: flex;
   align-items: center;
@@ -484,16 +489,13 @@
   &__text{
     font-size: 16px;
     line-height: 31px;
-    margin-top: 6px;
     @include m1260{
       font-size: vw2(16);
       line-height: vw2(22);
-      margin-top: vw2(6);
     }
     @include m768{
       font-size: vw3(14);
       line-height: vw3(23);
-      margin-top: vw3(1);
     }
   }
   input{
