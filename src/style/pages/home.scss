@@ -79,15 +79,107 @@
       }
     }
   }
+  &__tabs{
+    display: flex;
+    list-style: none;
+    margin-top: 45px;
+    margin-left: 172px;
+    @include m1600{
+      margin-left: vw(124);
+      margin-top: vw(45);
+    }
+    @include m1260{
+      margin-left: vw2(50);
+      margin-right: vw2(50);
+      margin-top: vw2(25);
+    }
+    @include m768{
+      margin-left: vw3(20);
+      margin-right: vw3(20);
+      margin-top: vw3(15);
+    }
+    li{
+      position: relative;
+      +li{
+        margin-left: 25px;
+        @include m1600{
+          margin-left: vw(25);
+        }
+        @include m1260{
+          margin-left: vw2(25);
+        }
+        @include m768{
+          margin-left: vw3(25);
+        }
+      }
+      a{
+        display: flex;
+        align-items: center;
+        height: 80px;
+        font-size: 20px;
+        line-height: 23px;
+        @include m1600{
+          height: vw(80);
+          font-size: vw(20);
+          line-height: vw(23);
+        }
+        @include m1260{
+          height: vw2(60);
+          font-size: vw2(18);
+          line-height: vw2(20);
+        }
+        @include m768{
+          height: vw3(45);
+          font-size: vw3(16);
+          line-height: vw3(21);
+        }
+      }
+      &::before,
+      &::after{
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        background: $mainColor;
+      }
+      &::before{
+        top: 0;
+      }
+      &::after{
+        bottom: 0;
+      }
+      &:hover{
+        &::before,
+        &::after{
+          height: 2px;
+        }
+      }
+      &.active{
+        font-weight: 600;
+        &::before,
+        &::after{
+          height: 4px;
+        }
+      }
+    }
+  }
+  &__tab{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
   &__text{
     margin-left: 172px;
-    margin-top: 30px;
+    margin-top: 45px;
     font-size: 16px;
     line-height: 31px;
 
     @include m1600{
       margin-left: vw(124);
-      margin-top: vw(30);
+      margin-top: vw(45);
     }
     @include m1260{
       margin-left: vw2(50);
