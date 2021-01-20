@@ -59,7 +59,7 @@
       height: 273px;
       margin-bottom: 38px;
       @include m1600{
-        height: vw(273);
+        height: vw(230);
         margin-bottom: vw(38);
       }
       @include m1260{
@@ -80,12 +80,12 @@
       }
     }
     &-title{
-      font-weight: 600;
-      font-size: 34px;
-      line-height: 40px;
+      font-weight: 400;
+      font-size: 45px;
+      line-height: 52px;
       @include m1600{
-        font-size: vw(34);
-        line-height: vw(40);
+        font-size: vw(42);
+        line-height: vw(47);
       }
       @include m1260{
         font-size: vw2(24);
@@ -125,7 +125,7 @@
     }
     &-text{
       font-size: 16px;
-      line-height: 31px;
+      line-height: 27px;
       margin-top: 25px;
       @include m1600{
         margin-top: vw(25);
