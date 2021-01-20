@@ -12,7 +12,7 @@
     width:  48.95%;
     box-sizing: border-box;
     position: relative;
-    padding-bottom: 48px;
+    padding-bottom: 100px;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -194,6 +194,10 @@
       margin-top: vw3(15);
       font-size: vw3(14);
       line-height: vw3(23);
+    }
+
+    p{
+      max-width: 600px;
     }
   }
   &__call-us{
