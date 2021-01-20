@@ -25,7 +25,7 @@ $(document).ready(function () {
 			$('.js-top-menu a[data-index="'+destination.index+'"]').parent().addClass('active');
 
 			if ($(window).width() > 768){
-				if(destination.index == 0 || destination.index == 1 || destination.index == 2 || destination.index == 5){
+				if(destination.index == 0 || destination.index == 1 || destination.index == 2 || destination.index == 4 || destination.index == 5){
 					fullpage_toggle(true);
 				}
 
@@ -235,22 +235,32 @@ $(document).ready(function () {
 				$('.process__block').eq(index).fadeIn(300).addClass('active').removeClass('prev next');
 			});
 
+			var	count = $('.process__dot').length;
+			console.log(index);
 			var wind =  $(window).width();
 			if (wind > 1600) {
 				if (index === 0){
-					$('.process__dots').css('transform','translateY(-30px)')
+					$('.process__dots').css('transform','translateY(109px)');
 				} else if (index === 1){
-					$('.process__dots').css('transform','translateY(-153px)')
+					$('.process__dots').css('transform','translateY(47px)');
+				} else if (index === count - 2){
+					$('.process__dots').css('transform','translateY(-47px)');
+				} else if (index === count - 1){
+					$('.process__dots').css('transform','translateY(-109px)');
 				} else {
-					$('.process__dots').css('transform','translateY(-248px)')
+					$('.process__dots').css('transform','translateY(0)');
 				}
 			} else if (wind > 1260) {
 				if (index === 0){
-					$('.process__dots').css('transform','translateY(-1.5625vw)')
+					$('.process__dots').css('transform','translateY(5.67vw)')
 				} else if (index === 1){
-					$('.process__dots').css('transform','translateY(-7.96875vw)')
+					$('.process__dots').css('transform','translateY(2.447vw)')
+				} else if (index === count - 2){
+					$('.process__dots').css('transform','translateY(-2.447vw)')
+				} else if (index === count - 1){
+					$('.process__dots').css('transform','translateY(-5.67vw)')
 				} else {
-					$('.process__dots').css('transform','translateY(-12.916vw)')
+					$('.process__dots').css('transform','translateY(0)')
 				}
 			} else {
 				if (index === 0){

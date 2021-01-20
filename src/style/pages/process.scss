@@ -1,30 +1,45 @@
 .process{
+
+  &__main{
+    display: flex;
+    padding-left: 100px;
+    @include m1600{
+      padding-left:  vw(100);
+    }
+    @include m1260{
+      padding-left: vw2(50);
+    }
+    @include m768 {
+      padding-left:  0;
+    }
+  }
   &__flex{
     display: flex;
     margin-top: 114px;
-    padding: 0 100px;
+    padding-right: 100px;
     @include m1600{
       margin-top: vw(114);
-      padding: 0 vw(100);
+      padding-right:  vw(100);
     }
     @include m1260{
       margin-top: vw2(74);
-      padding: 0 vw2(50);
+      padding-right: vw2(50);
     }
     @include m768 {
       margin-top: vw3(39);
-      padding: 0;
+      padding-right:  0;
     }
   }
   &__left{
     display: flex;
     flex-shrink: 0;
-    margin-right: 30px;
+    align-self: center;
+    box-sizing: border-box;
     @include m1600{
-      margin-right: vw(30);
     }
     @include m1260{
-      margin-right: vw2(30);
+      align-self: flex-start;
+      padding-top: vw2(116);
     }
     @include m768 {
       display: none;
@@ -52,10 +67,10 @@
     align-items: flex-start;
     width: 310px;
     transition: 0.4s;
-    transform: translateY(-30px);
+    transform: translateY(109px);
     @include m1600{
       width: vw(310);
-      transform: translateY(-1.5625vw);
+      transform: translateY(5.67vw);
     }
     @include m1260{
       width: vw2(57);
@@ -148,12 +163,23 @@
     flex-direction: column;
     height: 257px;
     justify-content: center;
+    transition: 0.4s;
+    align-self: center;
+    margin-right: 30px;
+
     @include m1600{
       height: vw(257);
+      margin-right: vw(30);
     }
     @include m1260{
       height: vw2(86);
       margin-top: vw2(36);
+      align-self: flex-start;
+      padding-top: vw2(116);
+      margin-right: vw2(30);
+    }
+    @include m768 {
+      display: none;
     }
     &-prev{
       transform: rotate(-90deg);
