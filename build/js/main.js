@@ -30,7 +30,7 @@
 $(document).ready(function () {
 	$('#fullpage').fullpage({
 		licenseKey: '930B3D8E-64114A48-BE58EB40-E2698A87',
-		scrollingSpeed: 400,
+		scrollingSpeed: 600,
 		scrollHorizontally: false,
 		controlArrows: false,
 		loopHorizontal: false,
