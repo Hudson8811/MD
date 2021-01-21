@@ -603,6 +603,9 @@
     }
     textarea{
       height: 99px;
+      @include m1600{
+        height: vw(90);
+      }
       @include m1260{
         height: vw2(79);
       }

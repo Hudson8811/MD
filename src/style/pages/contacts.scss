@@ -29,8 +29,8 @@
       padding-right: vw(90);
       padding-left: vw(173);
       width: vw(562);
-      padding-top: vw(45);
-      padding-bottom: vw(45);
+      padding-top: vw(25);
+      padding-bottom: vw(25);
     }
     @include m1260{
       padding-right: vw2(135);
@@ -59,17 +59,39 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    @media screen and (max-height:888px){
+      height: calc(100% - 9vw);
+    }
   }
   &__form{}
   &__info{
     margin-top: 94px;
     display: flex;
     justify-content: space-between;
+    &--right{
+      display: none;
+    }
     @include m1600{
       margin-top: vw(94);
     }
+    @media screen and (max-height:888px){
+      &--right{
+        display: flex;
+        margin-top: vw(25);
+        padding-right: vw(100);
+      }
+      &--left{
+        display: none;
+      }
+    }
     @include m1260{
       margin-top: vw2(59);
+      &--right{
+        display: none;
+      }
+      &--left{
+        display: flex;
+      }
     }
     @include m768{
       display: block;
@@ -140,6 +162,10 @@
     justify-content: space-between;
     @include m1600{
       padding: vw(50) vw(100) vw(50);
+    }
+    @media screen and (max-height:888px){
+      padding-top: vw(10);
+      padding-bottom: vw(10);
     }
     @include m1260{
       padding: vw2(50) vw2(50) vw2(50);
