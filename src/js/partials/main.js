@@ -75,6 +75,7 @@ $(document).ready(function () {
 	});
 
 	var	wheel = 0;
+	var	scrollPos = 0;
 	var	newDate = new Date();
 	var	oldDate = new Date();
 	$('.process').on('mousewheel', function(event) {
@@ -95,10 +96,9 @@ $(document).ready(function () {
 				}
 			}
 
-		
 			oldDate = new Date();
 			if( scrollAllowed ) {
-				if (event.deltaY > 0) {
+				if (event.deltaY > 40) {
 					$('.process__control-prev').trigger('click');
 				} else {
 					$('.process__control-next').trigger('click');
