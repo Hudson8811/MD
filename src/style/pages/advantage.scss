@@ -131,8 +131,6 @@
       margin-top: 25px;
       @include m1600{
         margin-top: vw(25);
-        font-size: vw(16);
-        line-height: vw(31);
       }
       @include m1260{
         font-size: vw2(16);
