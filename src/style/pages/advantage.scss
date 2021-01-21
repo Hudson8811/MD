@@ -58,7 +58,7 @@
       justify-content: flex-end;
       height: 273px;
       margin-bottom: 38px;
-      max-height: 20vh;
+      max-height: 25vh;
       @include m1600{
         height: vw(230);
         margin-bottom: vw(38);
@@ -126,8 +126,8 @@
       }
     }
     &-text{
-      font-size: 16px;
-      line-height: 27px;
+      font-size: 20px;
+      line-height: 30px;
       margin-top: 25px;
       @include m1600{
         margin-top: vw(25);
