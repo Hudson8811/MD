@@ -177,7 +177,7 @@ $(document).ready(function () {
 			$('.portfolio__menu').addClass('locked');
 			setTimeout(function() {
 				$('.portfolio__menu').removeClass('locked');
-			}, 600);
+			}, 800);
 
 			$('.js-portfolio-link').removeClass('active');
 			$(this).addClass('active');
@@ -209,7 +209,7 @@ $(document).ready(function () {
 			$('.process__dots').addClass('locked');
 			setTimeout(function() {
 				$('.process__dots').removeClass('locked');
-			}, 600);
+			}, 800);
 
 
 
