@@ -12,7 +12,7 @@
     width:  48.95%;
     box-sizing: border-box;
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -200,7 +200,13 @@
     }
 
     p{
-      max-width: 600px;
+      max-width: 570px;
+      b{
+        font-size:1.5em;
+      }
+      &+p{
+        margin-top: 20px;
+      }
     }
   }
   &__call-us{
@@ -227,13 +233,13 @@
     width: 250px;
     height: 250px;
     position: absolute;
-    right: -70px;
+    right: -250px;
     bottom: -245px;
     @include m1600{
       width: vw(250);
       height: vw(250);
       right: vw(-70);
-      bottom: vw(-200);
+      bottom: vw(-180);
     }
     @include m1260{
       width: vw2(209);

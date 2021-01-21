@@ -18,12 +18,13 @@ block main
 					.home__left
 						.home__content
 							.home__text
-								b web-студия
+								p
+									b web-студия
 							h1.home__title.section__title
 								span MOCKUP.DIGITAL
 							.home__text
-								p Работаем с крупными <b> digital production'ами </b>. Разрабатываем качественный дизайн, frontend и backend.
-								p <b>Для бизнеса</b> разрабатываем сайты, создаем уникальный дизайн для вашей организации и "обвязываем" бизнес аналитикой.
+								p Работаем с крупными <b class="nowrap"> digital-агентствами</b>.<br> Разрабатываем качественный дизайн, frontend и backend.
+								p Создаем сайты <b>для бизнеса</b>, разрабатываем уникальный дизайн для вашей организации и "обвязываем" бизнес аналитикой.
 
 							a.home__call-us.call-us.js-page-link(href="javascrip:;" data-index="5")
 								.call-us__img
@@ -60,7 +61,7 @@ block main
 		.section.dark
 			.advantage
 				.advantage__title.section__title.section__title--invert
-					span НАШИ ПРЕИМУЩЕСТВА
+					span НАШИ ЦЕННОСТИ
 					a.advantage__call-us.call-us.js-page-link(href="javascrip:;" data-index="5")
 						.call-us__img
 							svg(width='60' height='60' viewbox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg')
@@ -95,24 +96,8 @@ block main
 								path(d='M207.144 126.488H253.913' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='8 8')
 								path(d='M1.28564 126.488H48.0552' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='8 8')
 								path(d='M68.5304 69.1641L35.4607 36.0497' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='8 8')
-						.advantage__item-title Умный дизайн с акцентом на удобство пользователей
-						.advantage__item-text
-							p
-
-					.advantage__item
-						.advantage__item-image
-							svg(width='224' height='226' viewbox='0 0 224 226' fill='none' xmlns='http://www.w3.org/2000/svg')
-								path(d='M86.5174 164.896C130.34 164.896 165.865 129.276 165.865 85.3379C165.865 41.3994 130.34 5.78027 86.5174 5.78027C42.6947 5.78027 7.16943 41.3994 7.16943 85.3379C7.16943 129.276 42.6947 164.896 86.5174 164.896Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
-								path(d='M161.365 149.408C157.663 145.696 151.661 145.696 147.959 149.408C144.257 153.119 144.257 159.137 147.959 162.849L204.067 219.105C207.769 222.817 213.771 222.817 217.473 219.105C221.175 215.393 221.175 209.375 217.473 205.663L161.365 149.408Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
-								path(d='M25.4265 111.423L54.0199 82.754' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='5 5')
-								path(d='M98.0825 99.7005L126.676 71.0316' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='5 5')
-								path(d='M83.6665 99.2851L67.179 82.754' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='5 5')
-								path(d='M60.0796 86.3095C65.3849 86.3095 69.6857 81.9974 69.6857 76.6781C69.6857 71.3588 65.3849 67.0467 60.0796 67.0467C54.7744 67.0467 50.4736 71.3588 50.4736 76.6781C50.4736 81.9974 54.7744 86.3095 60.0796 86.3095Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
-								path(d='M132.736 73.7492C138.041 73.7492 142.342 69.4371 142.342 64.1178C142.342 58.7986 138.041 54.4864 132.736 54.4864C127.431 54.4864 123.13 58.7986 123.13 64.1178C123.13 69.4371 127.431 73.7492 132.736 73.7492Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
-								path(d='M90.9835 115.612C96.2887 115.612 100.589 111.3 100.589 105.981C100.589 100.661 96.2887 96.3492 90.9835 96.3492C85.6782 96.3492 81.3774 100.661 81.3774 105.981C81.3774 111.3 85.6782 115.612 90.9835 115.612Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
-						.advantage__item-title Современные технологии и подходы к разработке frontend'а
-						.advantage__item-text
-							p Адаптивная валидная вёрстка под все браузеры, различные устройства и разрешения экранов. Делаем красивые анимации с высокой скоростью загрузки.
+						.advantage__item-title Все клиенты
+						.advantage__item-text одинаково важны для нас: от стартапов до <span class="nowrap">digital-агенств</span>
 
 					.advantage__item
 						.advantage__item-image
@@ -140,9 +125,8 @@ block main
 								path(d='M136.441 105.437H125.949L120.696 124.287L131.188 144.437L141.687 124.287L136.441 105.437Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
 								path(d='M131.188 144.437L161.054 88.5366' stroke='white' stroke-width='3' stroke-miterlimit='10')
 								path(d='M131.188 144.437L101.323 89.1866' stroke='white' stroke-width='3' stroke-miterlimit='10')
-						.advantage__item-title Сильные клиенты <br>и блестящие победы
-						.advantage__item-text
-							p Оперативная техническая поддержку после запуска проекта в течение 12 месяцев.
+						.advantage__item-title Наш подход
+						.advantage__item-text включает в себя глубокую аналитику каждого проекта. Мы изучаем компанию, ее <span class="nowrap">бизнес-задачи</span> и предлагаем качественные варианты их решения
 
 					.advantage__item
 						.advantage__item-image
@@ -156,9 +140,23 @@ block main
 								path(d='M203.395 62.2956H263.226' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='8 8')
 								path(d='M14.8289 70.3467H74.6599' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='8 8')
 								path(d='M-10 105.906H49.8311' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='8 8')
-						.advantage__item-title Продвижение сайтов на маркетплейсах
+						.advantage__item-title Наша сила
+						.advantage__item-text это человеческий мозг, помноженный на технологии
+
+					.advantage__item
+						.advantage__item-image
+							svg(width='224' height='226' viewbox='0 0 224 226' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M86.5174 164.896C130.34 164.896 165.865 129.276 165.865 85.3379C165.865 41.3994 130.34 5.78027 86.5174 5.78027C42.6947 5.78027 7.16943 41.3994 7.16943 85.3379C7.16943 129.276 42.6947 164.896 86.5174 164.896Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
+								path(d='M161.365 149.408C157.663 145.696 151.661 145.696 147.959 149.408C144.257 153.119 144.257 159.137 147.959 162.849L204.067 219.105C207.769 222.817 213.771 222.817 217.473 219.105C221.175 215.393 221.175 209.375 217.473 205.663L161.365 149.408Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
+								path(d='M25.4265 111.423L54.0199 82.754' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='5 5')
+								path(d='M98.0825 99.7005L126.676 71.0316' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='5 5')
+								path(d='M83.6665 99.2851L67.179 82.754' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-dasharray='5 5')
+								path(d='M60.0796 86.3095C65.3849 86.3095 69.6857 81.9974 69.6857 76.6781C69.6857 71.3588 65.3849 67.0467 60.0796 67.0467C54.7744 67.0467 50.4736 71.3588 50.4736 76.6781C50.4736 81.9974 54.7744 86.3095 60.0796 86.3095Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
+								path(d='M132.736 73.7492C138.041 73.7492 142.342 69.4371 142.342 64.1178C142.342 58.7986 138.041 54.4864 132.736 54.4864C127.431 54.4864 123.13 58.7986 123.13 64.1178C123.13 69.4371 127.431 73.7492 132.736 73.7492Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
+								path(d='M90.9835 115.612C96.2887 115.612 100.589 111.3 100.589 105.981C100.589 100.661 96.2887 96.3492 90.9835 96.3492C85.6782 96.3492 81.3774 100.661 81.3774 105.981C81.3774 111.3 85.6782 115.612 90.9835 115.612Z' stroke='white' stroke-width='3' stroke-miterlimit='10')
+						.advantage__item-title Обеспечиваем
 						.advantage__item-text
-							p Не следует, однако забывать, что укрепление и развитие структуры требуют от нас анализа существенных финансовых условий
+							p технологическую поддержку и надежность продукта, предоставляем высококачественные услуги, которые нужны нашим клиентам и партнерам
 
 		.section
 			.service
@@ -284,18 +282,17 @@ block main
 									.p-step__top
 										.p-step__title <span>01</span> Анализ ТЗ
 										.p-step__text
-											p На этом этапе Заказчик предоставляет нашей компании всю имеющуюся информацию о предстоящем объеме работы, при необходимости, заключение соглашения о конфиденциальности предоставленных данных (NDA).Вся информация должна быть максимально подробно изложена в развернутом структурированном виде (спецификация или техническое задание)
-
+											p На первом этапе Заказчик предоставляет нашей компании всю имеющуюся информацию о предстоящем объеме работы. При необходимости заключается соглашения о конфиденциальности предоставленных данных (NDA). Вся информация должна быть максимально подробно изложена в развернутом структурированном виде (спецификация или техническое задание).
 
 								.process__block.p-step
 									.p-step__top
 										.p-step__title <span>02</span> Согласование стоимости и условий работы с клиентом
 										.p-step__text
-											p На этом этапе с заказчиком согласовывается стоимость работ согласно техническому заданию или спецификации и составу команды, принимающей участие в разработке проекта.
+											p На этом этапе с Заказчиком согласовывается стоимость работ в соответствии с техническим заданием или спецификацией и составу команды, принимающей участие в разработке проекта.
 											p Доступны следующие модели сотрудничества:
 											ul
-												li Фиксированная цена -  Наиболее востребована для малого и среднего бизнеса в работе над краткосрочными и среднесрочными проектами. Модель включает в себя точный объем требований, сроки и фиксированный бюджет.
-												li Почасовая разработка -
+												li Фиксированная цена - наиболее востребована для малого и среднего бизнеса в работе с краткосрочными и среднесрочными проектами.
+												li Время и материалы - данная модель идеально подходит для долгосрочных проектов с изменяющимися требованиями и неопределенным объемом работ.
 
 								.process__block.p-step
 									.p-step__top
@@ -468,8 +465,8 @@ block main
 							.contacts__col
 								.contacts__col-title КОНТАКТНАЯ ИНФОРМАЦИЯ
 								.contacts__col-text
-									a(href="tel:+79998887765") +7 (999) 888 77-65
-									a(href="mailto:12345@mail.com") 12345@mail.com
+									a(href="tel:+79155118815") +7 (915) 511 88-15
+									a(href="mailto:agency@mockup.digital") agency@mockup.digital
 							.contacts__col
 								.contacts__col-title СВЯЗАТЬСЯ С НАМИ
 								.contacts__col-social.social
@@ -493,7 +490,7 @@ block main
 						.contacts__image(style="background-image: url(images/contacts.jpg)")
 
 				.contacts__copyline
-					.contacts__copyleft MOCKUP DIGITAL
+					.contacts__copyleft MOCKUP.DIGITAL
 					.contacts__copyright
-						span 2011 - 2020 ©
+						span 2017 - 2020 ©
 						span Все права защищены
