@@ -55,6 +55,9 @@
   }
   &__content{
     position: relative;
+    @include m1260{
+      width: 100%;
+    }
   }
   &__title{
     @include m1260{
@@ -230,7 +233,7 @@
       width: vw(250);
       height: vw(250);
       right: vw(-70);
-      bottom: vw(-245);
+      bottom: vw(-200);
     }
     @include m1260{
       width: vw2(209);

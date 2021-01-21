@@ -8,6 +8,7 @@
     }
     @include m1260{
       margin-top: vw2(70);
+      padding-bottom: vw2(50);
     }
     @include m768{
       margin-top: vw3(54);
@@ -28,9 +29,9 @@
     white-space: nowrap;
     overflow: hidden;
     @include m1600{
-      padding: vw(44) vw(54) 0;
-      height: vw(570);
-      width: vw(440);
+      padding: vw(35) vw(54) 0;
+      height: vw(486);
+      width: vw(400);
     }
     @include m1260{
       padding: vw2(45) vw2(51) 0;
@@ -164,7 +165,7 @@
       margin-top: 30px;
       transition: all 0.4s;
       @include m1600{
-        margin-top: vw(30);
+        margin-top: vw(10);
       }
       @include m1260{
         margin-top: vw2(30);
