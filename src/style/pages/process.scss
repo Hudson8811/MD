@@ -53,7 +53,8 @@
       height: calc(100vh - 21vw);
     }
     @include m1260{
-     height: calc(100vh - 29vw);
+     height: auto;
+      padding-bottom: vw2(50);
     }
     @include m768 {
       //max-height: calc(100vh - 42vw - 90px);
