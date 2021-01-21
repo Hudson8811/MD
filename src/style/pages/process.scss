@@ -62,6 +62,9 @@
       padding-bottom: vw3(30);
     }
   }
+  &__content{
+    flex-grow: 1;
+  }
   &__dots{
     display: flex;
     flex-direction: column;
