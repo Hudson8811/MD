@@ -28,6 +28,19 @@
 /* my scripts */
 
 $(document).ready(function () {
+	$('#contact-form').on('submit',function (){
+		event.preventDefault();
+		$.ajax({
+			type: 'post',
+			url: 'php/post.php',
+			data: $('#contact-form').serialize(),
+			success: function () {
+				alert('Успешно отправлено.');
+				$('#contact-form')[0].reset();
+			}
+		});
+	});
+
 	$('#fullpage').fullpage({
 		licenseKey: '930B3D8E-64114A48-BE58EB40-E2698A87',
 		scrollingSpeed: 600,

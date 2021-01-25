@@ -504,21 +504,21 @@
             <div class="contacts__title section__title"><span>СВЯЗАТЬСЯ С НАМИ</span></div>
             <div class="contacts__flex">
               <div class="contacts__left">
-                <form class="contacts__form form">
+                <form class="contacts__form form" id="contact-form">
                   <div class="form__input">
-                    <input type="text" name="" placeholder="Как к вам обращаться?" required>
+                    <input type="text" name="name" placeholder="Как к вам обращаться?" required>
                     <div class="form__input-status"></div>
                   </div>
                   <div class="form__input">
-                    <input type="tel" name="" placeholder="Телефон" required>
+                    <input type="tel" name="phone" placeholder="Телефон" required>
                     <div class="form__input-status"></div>
                   </div>
                   <div class="form__input">
-                    <input type="email" name="" placeholder="Email" required>
+                    <input type="email" name="email" placeholder="Email" required>
                     <div class="form__input-status"></div>
                   </div>
                   <div class="form__input">
-                    <select class="js-custom-select" name="" required>
+                    <select class="js-custom-select" name="subject" required>
                       <option></option>
                       <option value="Аутсорс-разработка">Аутсорс-разработка</option>
                       <option value="Создание сайта">Создание сайта</option>
@@ -527,7 +527,7 @@
                     <div class="form__input-status"></div>
                   </div>
                   <div class="form__input">
-                    <textarea name="" placeholder="Сообщение" required></textarea>
+                    <textarea name="text" placeholder="Сообщение" required></textarea>
                     <div class="form__input-status"></div>
                   </div>
                   <div class="form__btns">

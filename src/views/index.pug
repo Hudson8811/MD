@@ -392,25 +392,25 @@ block main
 					span СВЯЗАТЬСЯ С НАМИ
 				.contacts__flex
 					.contacts__left
-						form.contacts__form.form
+						form.contacts__form.form#contact-form
 							.form__input
-								input(type="text" name="" placeholder="Как к вам обращаться?" required)
+								input(type="text" name="name" placeholder="Как к вам обращаться?" required)
 								.form__input-status
 							.form__input
-								input(type="tel" name="" placeholder="Телефон" required)
+								input(type="tel" name="phone" placeholder="Телефон" required)
 								.form__input-status
 							.form__input
-								input(type="email" name="" placeholder="Email" required)
+								input(type="email" name="email" placeholder="Email" required)
 								.form__input-status
 							.form__input
-								select.js-custom-select(name="" required)
+								select.js-custom-select(name="subject" required)
 									option
 									option(value="Аутсорс-разработка") Аутсорс-разработка
 									option(value="Создание сайта") Создание сайта
 									option(value="Техническая поддержка") Техническая поддержка
 								.form__input-status
 							.form__input
-								textarea(name="" placeholder="Сообщение" required)
+								textarea(name="text" placeholder="Сообщение" required)
 								.form__input-status
 
 
