@@ -137,10 +137,9 @@ $(document).ready(function () {
 					scrollAllowed = false;
 				}
 			}
-
 			oldDate = new Date();
 			if( scrollAllowed ) {
-				if (event.deltaY > 40) {
+				if (event.deltaY > 0) {
 					$('.process__control-prev').trigger('click');
 				} else {
 					$('.process__control-next').trigger('click');

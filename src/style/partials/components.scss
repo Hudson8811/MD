@@ -72,8 +72,9 @@
 }
 
 .social{
-  display: flex;
+  /*display: flex;*/
   align-items: center;
+  display: none;
   a{
     display: block;
     margin: 0 7.5px;
