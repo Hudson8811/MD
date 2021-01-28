@@ -11,6 +11,7 @@
     }
     @include m768 {
       padding-left:  0;
+      display: block;
     }
   }
   &__flex{
