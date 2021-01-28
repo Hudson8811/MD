@@ -52,10 +52,60 @@ html(lang="ru")
 
 		link(href="css/main.css" rel="stylesheet")
 
+		style.
+			.preloader {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #ffffff;
+				position: fixed;
+				z-index: 99999;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.sk-double-bounce {
+				width: 150px;
+				height: 150px;
+				position: relative;
+				margin: auto;
+			}
+
+			.sk-child {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				background-color: #222222;
+				opacity: 0.6;
+				position: absolute;
+				top: 0;
+				left: 0;
+				animation: sk-double-bounce 2.0s infinite ease-in-out;
+			}
+
+			.sk-double-bounce-2 {
+				animation-delay: -1.0s;
+			}
+
+			@keyframes sk-double-bounce {
+				0%, 100% {
+					transform: scale(0);
+				}
+				50% {
+					transform: scale(1.0);
+				}
+			}
+
 
 		//title= `${page.title}`
 
 	body
+		#preloader.preloader
+			.sk-double-bounce
+				.sk-child.sk-double-bounce-1
+				.sk-child.sk-double-bounce-2
 		block header
 			include ../partials/_header
 

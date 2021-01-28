@@ -28,6 +28,9 @@
 /* my scripts */
 
 $(document).ready(function () {
+	$('#preloader').fadeOut('400').promise().done(function(){
+		$('#preloader').remove();
+	});
 	$('#contact-form').on('submit',function (){
 		event.preventDefault();
 		$.ajax({

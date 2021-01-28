@@ -46,9 +46,63 @@
       
     </script>
     <link href="css/main.css" rel="stylesheet">
+    <style>
+      .preloader {
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	background: #ffffff;
+      	position: fixed;
+      	z-index: 99999;
+      	top: 0;
+      	left: 0;
+      	width: 100%;
+      	height: 100%;
+      }
+      
+      .sk-double-bounce {
+      	width: 150px;
+      	height: 150px;
+      	position: relative;
+      	margin: auto;
+      }
+      
+      .sk-child {
+      	width: 100%;
+      	height: 100%;
+      	border-radius: 50%;
+      	background-color: #222222;
+      	opacity: 0.6;
+      	position: absolute;
+      	top: 0;
+      	left: 0;
+      	animation: sk-double-bounce 2.0s infinite ease-in-out;
+      }
+      
+      .sk-double-bounce-2 {
+      	animation-delay: -1.0s;
+      }
+      
+      @keyframes sk-double-bounce {
+      	0%, 100% {
+      		transform: scale(0);
+      	}
+      	50% {
+      		transform: scale(1.0);
+      	}
+      }
+      
+      
+    </style>
     <!--title= `${page.title}`-->
   </head>
   <body>
+    <div class="preloader" id="preloader">
+      <div class="sk-double-bounce">
+        <div class="sk-child sk-double-bounce-1"></div>
+        <div class="sk-child sk-double-bounce-2"></div>
+      </div>
+    </div>
     <header class="header">
       <div class="header__container">
         <div class="header__left"><a class="header__logo js-page-link" href="javascrip:;" data-index="0">
